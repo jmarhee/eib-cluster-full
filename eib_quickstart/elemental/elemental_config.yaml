@@ -1,0 +1,7 @@
+elemental:
+  registration:
+    url: YOUR_RANCHER_ELEMENTAL_REGISTRATION_URL
+    ca-cert: |-
+      -----BEGIN CERTIFICATE-----
+
+      -----END CERTIFICATE-----

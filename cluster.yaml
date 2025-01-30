@@ -1,0 +1,18 @@
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+metadata:
+  name: location-central-0
+  namespace: fleet-default
+spec:
+  kubernetesVersion: v1.31.3+k3s1
+  rkeConfig:
+    machinePools:
+      - name: pool1
+        quantity: 1
+        etcdRole: true
+        controlPlaneRole: true
+        workerRole: true
+        machineConfigRef:
+          kind: MachineInventorySelectorTemplate
+          name: location-central-selector
+          apiVersion: elemental.cattle.io/v1beta1
